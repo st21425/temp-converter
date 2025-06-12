@@ -7,6 +7,7 @@ class Temp():
     def __init__(self):
         self.root = Tk()
         self.root.title("Temp converter")
+        self.root.resizable(0,0)
 
         self.container = Frame(self.root)
         self.container.grid(row= 0, column=0, sticky = "nsew")
@@ -34,6 +35,8 @@ class Temp():
 
         self.toCelButton.grid(row=1, column=0,padx=10,pady=10, sticky="nsew")
         self.toFarButton.grid(row=1, column=1,padx=10,pady=10, sticky="nsew")
+
+        frame.grid(row=0, column=0, sticky="nswe")
 
         self.root.grid_columnconfigure(0, weight=1)
         self.root.grid_rowconfigure(0, weight=1)
